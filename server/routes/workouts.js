@@ -18,14 +18,8 @@ router.get('/:id',getOneWorkout)
 //post a new workout
 router.post('/', createWorkout)
 // delete
-router.delete('/:id',(req,res)=>{
-    res.json({mssg:'delete a  workout'})
-
-})
+router.delete('/:id',deleteWorkout)
 // update 
-router.patch('/:id',(req,res)=>{
-    res.json({mssg:'update a  workout'})
-
-})
+router.patch('/:id',updateWorkout)
 
 module.exports = router

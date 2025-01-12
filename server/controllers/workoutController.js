@@ -47,7 +47,7 @@ const createWorkout = async (req, res) =>{
     const deleteWorkout =async (req, res)=>{
 
         const {id}=req.params
-        if(!mongoose.Types.ObjectId.isVailid(id)){
+        if(!mongoose.Types.ObjectId.isValid(id)){
             return res.status(404).json({error :"workout not found"})
         }
         const workout = await Workout.findOneAndDelete({_id:id})
@@ -61,8 +61,8 @@ const createWorkout = async (req, res) =>{
 // update a workout 
 const updateWorkout =async (req,res) =>{
 
-    const {id} = req.params
-    if(!mongoose.Types.ObjectId.isVailid(id)){
+    const { id } = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)){
         return res.status(404).json({error :"workout not found"})
     }
     const workout = await Workout.findOneAndUpdate({_id:id},{
