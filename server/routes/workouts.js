@@ -24,7 +24,7 @@ router.delete('/:id',(req,res)=>{
 })
 // update 
 router.patch('/:id',(req,res)=>{
-    res.json({mssg:'edit a  workout'})
+    res.json({mssg:'edit a  workot'})
 
 })
 
